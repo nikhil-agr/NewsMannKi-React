@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 export class News extends Component {
   static defaultProps = {
     country: "in",
-    pageSize: 8,
+    pageSize: 9,
     category: "general",
   };
   static propTypes = {
@@ -89,12 +89,13 @@ export class News extends Component {
                     <NewsItem
                       title={element.title ? element.title.slice(0, 45) : ""}
                       description={
-                        element.description
-                          ? element.description.slice(0, 90)
-                          : ""
+                        element.description ? element.description.slice(0, 90) : ""
                       }
-                      imageUrl={element.urlToImage}
+                      imageUrl={element.urlToImage} 
                       newsUrl={element.url}
+                      author={element.author}
+                      date={element.publishedAt}
+                      source={element.source.name}
                     />
                   </div>
                 );
