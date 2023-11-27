@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 export class Navbar extends Component {
     
   render() {
@@ -7,9 +8,9 @@ export class Navbar extends Component {
       <>
         <nav className="navbar navbar-dark navbar-expand-lg bg-dark ">
           <div className="container-fluid">
-            <Link className="navbar-brand" to="/">
+            <NavLink className="navbar-brand" to="/">
               NewsMannKi
-            </Link>
+            </NavLink>
             <button
               className="navbar-toggler"
               type="button"
@@ -27,39 +28,39 @@ export class Navbar extends Component {
             >
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                  <Link className="nav-link active" aria-current="page" to="/">
+                  <NavLink className={({isActive})=>`mx-2  text-decoration-none flex text-center ${isActive?"text-light":"text-secondary"}`}  aria-current="page" to="/">
                     Home
-                  </Link>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/business">
+                  <NavLink className={({isActive})=>`mx-2  text-decoration-none flex text-center ${isActive?"text-light":"text-secondary"}`}  to="/business">
                     Business
-                  </Link>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/entertainment">
+                  <NavLink className={({isActive})=>`mx-2  text-decoration-none flex text-center ${isActive?"text-light":"text-secondary"}`} to="/entertainment">
                     Entertainment
-                  </Link>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/health">
+                  <NavLink className={({isActive})=>`mx-2  text-decoration-none flex text-center ${isActive?"text-light":"text-secondary"}`} to="/health">
                     Health
-                  </Link>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/science">
+                  <NavLink className={({isActive})=>`mx-2  text-decoration-none flex text-center ${isActive?"text-light":"text-secondary"}`} to="/science">
                     Science
-                  </Link>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/sports">
+                  <NavLink className={({isActive})=>`mx-2  text-decoration-none flex text-center ${isActive?"text-light":"text-secondary"}`} to="/sports">
                     Sports
-                  </Link>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/technology">
+                  <NavLink className={({isActive})=>`mx-2  text-decoration-none flex text-center ${isActive?"text-light":"text-secondary"}`} to="/technology">
                     Technology
-                  </Link>
+                  </NavLink>
                 </li>
               </ul>
             </div>
